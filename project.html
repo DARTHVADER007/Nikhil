@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>College FAQ's</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            color: #fff; /* White text color */
+            background-color: #000; /* Black background color */
+        }
+
+        .intro-section {
+            text-align: center;
+            padding: 50px;
+            background-color: #1a1a1a; /* Dark grey background color */
+        }
+
+        #intro-image {
+            max-width: 100%;
+            height: auto;
+        }
+
+        #faq-heading {
+            font-size: 36px;
+            margin: 20px 0;
+            text-align: center;
+            color: #e50914; /* Netflix red color */
+        }
+
+        .faq-container {
+            max-width: 800px; /* Adjust the max-width as needed */
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #1a1a1a; /* Dark grey background color */
+            border-radius: 5px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .faq-card {
+            width: 100%;
+            transition: transform 0.5s;
+            cursor: pointer;
+            margin: 10px 0;
+            border-radius: 5px;
+            overflow: hidden;
+            background-color: #2c2c2c; /* Darker grey background color */
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+        }
+
+        .faq-card:hover {
+            transform: scale(1.05);
+        }
+
+        .card-content {
+            width: 100%;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+
+        .question {
+            font-size: 18px;
+            color: #fff; /* White color for the question */
+            margin-bottom: 10px;
+            transition: color 0.3s; /* Smooth color transition */
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5); /* Shadow effect */
+        }
+
+        .answer {
+            font-size: 16px;
+            color: yellow; /* Yellow color for the answer text */
+            display: none;
+        }
+
+        .faq-card:hover .question {
+            color: #e50914; /* Red color on hover for the question */
+        }
+
+        .faq-card.flipped .answer {
+            display: block;
+        }
+
+        /* Header for contact information */
+        .header-contact {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            display: flex;
+            align-items: center;
+            color: #e50914; /* Netflix red color */
+        }
+
+        .header-contact span {
+            margin-right: 10px;
+        }
+
+        /* College logo in the top left corner */
+        #college-logo {
+            width: 400px; /* Slightly smaller size */
+            height: auto;
+            position: absolute;
+            top: 20px;
+            left: 20px;
+        }
+    </style>
+</head>
+<body>
+
+<img id="college-logo" src="https://i.ibb.co/KmmT5Rp/ln.jpg" alt="College Logo">
+
+<div class="intro-section">
+    <img id="intro-image" src="https://i.ibb.co/0nT7c61/nos.jpg" alt="Introduction Image">
+</div>
+
+<h1 id="faq-heading">College FAQ's</h1>
+
+<div class="faq-container">
+    <div class="faq-card" onclick="toggleCard(1)">
+        <div class="card-content">
+            <div class="question">Forgot my college mail password and I'm not able to change it on my own as I do with my normal Gmail...what should I do?</div>
+            <div class="answer">You need to visit your college admin who maintains all the student mails to reset your password.</div>
+        </div>
+    </div>
+    <div class="faq-card" onclick="toggleCard(2)">
+        <div class="card-content">
+            <div class="question">What are the different labs in CSE Dept?</div>
+            <div class="answer">Our college comprises a total of 4 labs in the CSE department: 1) Advanced Computing Lab 2) DT Lab 3) INC Lab and lastly 4) Smart Coder's Lab.</div>
+        </div>
+    </div>
+    <div class="faq-card" onclick="toggleCard(3)">
+        <div class="card-content">
+            <div class="question">Is NSRIT Accredited with NAAC?</div>
+            <div class="answer">Yes, NSRIT is accredited with NAAC "A" Grade with a CGPA of 3.10/4.00 and is also having NBA accreditation.</div>
+        </div>
+    </div>
+    <div class="faq-card" onclick="toggleCard(4)">
+        <div class="card-content">
+            <div class="question">How can I check my result?</div>
+            <div class="answer">You can check your results by visiting the official college website "http://www.nsrit.edu.in/"...you can also pay fees, know your attendance and also know what is happening in your college.</div>
+        </div>
+    </div>
+    <div class="faq-card" onclick="toggleCard(5)">
+        <div class="card-content">
+            <div class="question">Is NSRIT Autonomous?</div>
+            <div class="answer">Yes, NSRIT is autonomous and is affiliated with JNTU-GV.</div>
+        </div>
+    </div>
+</div>
+
+<!-- Header for contact information -->
+<div class="header-contact">
+    <span>Contact for further assistance:</span>
+    <span>📞 +91 80994 64546</span>
+    <span>✉️ office@nsrit.edu.in</span>
+</div>
+
+<script>
+    function toggleCard(cardNumber) {
+        var card = document.querySelector('.faq-card:nth-child(' + cardNumber + ')');
+        card.classList.toggle('flipped');
+    }
+</script>
+
+</body>
+</html>
+
